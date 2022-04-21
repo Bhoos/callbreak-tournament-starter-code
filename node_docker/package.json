@@ -1,0 +1,16 @@
+{
+  "name": "callbreak-tournament-bot-node-example",
+  "description": "An example node implementation for the client.",
+  "version": "0.0.1",
+  "main": "./src/index.js",
+  "type": "module",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^17.0.10"
+  }
+}

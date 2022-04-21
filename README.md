@@ -4,7 +4,9 @@ Starter codes for callbreak tournament
 
 # Building Instructions
 
-You can build the existing projects by running `docker build -t <tag> .` inside `node_docker/` or `python_docker/`.
+You can build the existing projects by running `docker build . -t <tag>` inside `node_docker/` or `python_docker/`.
+
+> `.` denotes that it will try to build the current directory
 
 This builds you a docker image with the specified `<tag>` which you can view by running `docker images`.
 
@@ -13,12 +15,18 @@ This builds you a docker image with the specified `<tag>` which you can view by 
 To run a built container run:
 
 ```
-docker run --name <container name> -p 7000:7000 -m=2048m --cpus=1 -d <tag or image id>
+docker run --name <container name> -p 7000:7000 -m=2048m --cpus=1 -it <tag or image id>
 ```
 
-This runs the image with `<tag or image id>` and binds local port `7000` with contianer port `7000`, limits memory to `2040 MB RAM` and `1 CPU`. This is how we run your docker image on our server.
+This runs the image with `<tag or image id>` and binds local port `7000` with contianer port `7000`, limits memory to `2040 MB RAM` and `1 CPU`. We run your docker image similarly on our server.
 
 > You should test your image by running it in the sandbox prior to uploading it.
+
+After running your image, you create a container. The container reserves the name that you have provided it.
+
+- To remove a container, run `docker rm <container id or name>`.
+- To list all active containers, run `dokcer ps`.
+- To list all containers, including inactive ones, run `docker ps -a`.
 
 To export your docker image for submission, run `docker save <tag> | gzip > <tag>.tar.gz`.
 

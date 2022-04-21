@@ -1,25 +1,25 @@
 export const Suit = {
-  HEART: { value: 2, string: "H" },
-  CLUB: { value: 3, string: "C" },
-  DIAMOND: { value: 4, string: "D" },
+  HEART: { value: 2, code: "H" },
+  CLUB: { value: 3, code: "C" },
+  DIAMOND: { value: 4, code: "D" },
   // spade always trumps other cards
-  SPADE: { value: 5, string: "S" },
+  SPADE: { value: 5, code: "S" },
 };
 
 export const Rank = {
-  TWO: { value: 2, string: "2" },
-  THREE: { value: 3, string: "3" },
-  FOUR: { value: 4, string: "4" },
-  FIVE: { value: 5, string: "5" },
-  SIX: { value: 6, string: "6" },
-  SEVEN: { value: 7, string: "7" },
-  EIGHT: { value: 8, string: "8" },
-  NINE: { value: 9, string: "9" },
-  TEN: { value: 10, string: "T" },
-  JACK: { value: 11, string: "J" },
-  QUEEN: { value: 12, string: "Q" },
-  KING: { value: 13, string: "K" },
-  ACE: { value: 14, string: "1" },
+  TWO: { value: 2, code: "2" },
+  THREE: { value: 3, code: "3" },
+  FOUR: { value: 4, code: "4" },
+  FIVE: { value: 5, code: "5" },
+  SIX: { value: 6, code: "6" },
+  SEVEN: { value: 7, code: "7" },
+  EIGHT: { value: 8, code: "8" },
+  NINE: { value: 9, code: "9" },
+  TEN: { value: 10, code: "T" },
+  JACK: { value: 11, code: "J" },
+  QUEEN: { value: 12, code: "Q" },
+  KING: { value: 13, code: "K" },
+  ACE: { value: 14, code: "1" },
 };
 
 export class Card {
@@ -53,6 +53,6 @@ export class Card {
   }
 
   toString() {
-    return this.rank.string + this.suit.string;
+    return this.rank.code + this.suit.code;
   }
 }

@@ -4,7 +4,7 @@ from typing import List
 from card import Card, RANK, SUIT
 
 
-def parse_card_arr(cards: List[Card]):
+def parse_card_arr(cards: List[str]):
     return [Card(card) for card in cards]
 
 

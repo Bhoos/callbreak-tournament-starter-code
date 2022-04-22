@@ -11,6 +11,7 @@ WORKDIR client
 
 # ADD command adds the file or folder to the destination. 
 # Since the working directory is `./client`, it copies the file inside `./client`.
+RUN mkdir ./src
 ADD ./src/* ./src
 ADD ./requirements.txt .
 

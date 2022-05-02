@@ -99,14 +99,14 @@ async function stateToApiParser() {
     }
   }
 
-  if (hand == -1) {
-    return `${JSON.stringify(
+  if (hand === -1) {
+    return JSON.stringify(
       bidBody(gameHistoryData, roundNumber, turn, playerIds, totalPoints),
       null,
       2
-    )}`;
+    );
   } else {
-    return `${JSON.stringify(
+    return JSON.stringify(
       playBody(
         gameHistoryData,
         roundNumber,
@@ -117,7 +117,7 @@ async function stateToApiParser() {
       ),
       null,
       2
-    )}`;
+    );
   }
 }
 

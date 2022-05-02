@@ -10,6 +10,8 @@ Starter codes for callbreak tournament
 
 > `sanic` has been selected because it is considerably faster than `flask` but the downside is that the image size is now considerably bigger `60 MB -> 275 MB` but runs `~9x` faster on basic requests.
 
+`parsers/` contains script for parsing game history data.
+
 ## Running instructions
 
 ### Python
@@ -26,6 +28,19 @@ Starter codes for callbreak tournament
 
 1. Navigate into node_docker first with `cd node_docker/`
 1. Run with `node src/index.js`
+
+### Parser
+
+1. Copy the data from game analytics and save it in a file.
+1. Usage : `node stateToApiParser file round hand turn`
+
+   ```
+   file refers to the filepath/file where the data from game analytics is saved.
+   round ranges from 1 to 5
+   hand ranges from 0 to 13 (0 stands for bidding phase)
+   turn ranges from 0 to 3 (turn is in the respect to the playerIds)
+   (turn 0 means turn of bot-1 when playerIds=['bot-1','bot-2','bot-3','bot-4'])
+   ```
 
 # Building Instructions
 

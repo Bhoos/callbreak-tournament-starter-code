@@ -21,7 +21,7 @@ ADD ./package.json .
 
 # RUN command runs the command in command line
 RUN mkdir ./src
-ADD ./src/* ./src
+ADD ./src/* ./src/
 
 # EXPOSE opens up the port to communication outside the container.
 # WE ASSUME THAT YOUR SERVER WILL RUN ON THIS PORT. 

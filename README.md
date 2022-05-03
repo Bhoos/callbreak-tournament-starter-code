@@ -10,7 +10,7 @@ Starter codes for callbreak tournament
 
 > `sanic` has been selected because it is considerably faster than `flask` but the downside is that the image size is now considerably bigger `60 MB -> 275 MB` but runs `~9x` faster on basic requests.
 
-`parsers/` contains script for parsing game history data.
+`parsers/` contains script for parsing game history data . Use the parser to convert the game history data to sandbox/game api format.
 
 ## Running instructions
 
